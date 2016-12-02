@@ -5,8 +5,8 @@
 /* Links */
 
 @font-face {
-  font-family: 'Dubba Dubba NF';
-  src: url('DubbaDubbaNF.ttf');
+  font-family: 'Quicksand';
+  src: url('Quicksand-Regular.otf');
 }
 
 @-moz-keyframes spin {
@@ -20,6 +20,66 @@
 @keyframes spin {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
+}
+
+
+
+@-webkit-keyframes blur {
+  0% { -webkit-filter: blur(10px); }
+    10% {-webkit-filter: blur(1px);}
+  100% { -webkit-filter: blur(0px); }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+    0%{transform: translateX(-10%)}
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    0%{transform: translateX(-10%)}
+    100% { -webkit-transform: translateX(0%); }
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 100%;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    position:absolute;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: auto;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position:absolute;
+  }
 }
 
 a.item,
@@ -57,7 +117,7 @@ body {
 .site-wrapper {
   display: table;
   width: 100%;
-font-family: 'Dubba Dubba NF';
+font-family: 'Quicksand';
   height: 100%; /* For at least Firefox */
   min-height: 100%;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
@@ -66,7 +126,6 @@ font-family: 'Dubba Dubba NF';
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
-  background-image: url(Front%20Page%20Test.jpg);
   background-size: cover;
   background-repeat:   no-repeat;
   background-position: center center
@@ -74,6 +133,7 @@ font-family: 'Dubba Dubba NF';
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+    margin-top: auto;
 }
 
 /* Padding for spacing */
@@ -102,14 +162,12 @@ font-family: 'Dubba Dubba NF';
   padding-left: 0;
   font-size: 25px;
 
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a.item:hover,
 .masthead-nav > li > a.item:focus {
   background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
 }
 .masthead-nav > .active > a.item,
 .masthead-nav > .active > a.item:hover,
@@ -145,13 +203,12 @@ font-family: 'Dubba Dubba NF';
 .mastfoot {
   color: rgb(0, 0, 0);
 background-color: rgba(255, 255, 255, 0.4);  
-    position: absolute;
+    top: 60px;
+    height: 647px;
     right: 0px;
-    padding: 10px;
     position: absolute;
-    top: 0px;
-    height: 100%;
-
+    display: none;
+    -webkit-animation: fadeIn 1s;
 }
 
 
@@ -162,8 +219,9 @@ background-color: rgba(255, 255, 255, 0.4);
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 200px;
+    left:21%;
   }
 
   /* Start the vertical centering */
@@ -172,10 +230,10 @@ background-color: rgba(255, 255, 255, 0.4);
   }
   /* Handle the widths */
   .masthead,
-  .mastfoot,
-  .cover-container {
+  .mastfoot{
     width: 250px; /* Must be percentage or pixels for horizontal alignment */
   }
+
 }
 
 @media (min-width: 992px) {
@@ -185,9 +243,13 @@ background-color: rgba(255, 255, 255, 0.4);
   }
 }
 
-.logo{
-    left: 0px;
-    position: fixed;    
+#logo{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    top:45%;
+
+    -webkit-animation: blur 7s;
 }
 
 .lowerlogo{
@@ -197,12 +259,29 @@ background-color: rgba(255, 255, 255, 0.4);
 }
 
 .student-stories{
-    left: 425px;
-    top: 100px;
-    font-size: 36px;
-    position: fixed;
-    color: #B39DDC;
+    left: 0px;
+    top: 0px;
+    font-size: 32px;
+    position: absolute;
+background-color: rgba(0, 0, 0, 0.5);  
+    width: 100%;
+    height: 60px;
+
     
+}
+
+#words:hover{
+    color: red;
+    text-decoration: none;
+    
+}
+#words{
+    color: #ffffff;
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
 }
 
 #circle {
@@ -235,3 +314,183 @@ background-color: rgba(255, 255, 255, 0.4);
     background: url("../img/svg/circle-btn.svg") no-repeat center center/100%;
     
 }
+
+.padding{
+    height: 90px;
+}
+
+#menubutton{
+    float: right;
+    color:#ffffff;
+    margin-right: 20px;
+    margin-top:5px;
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+    
+}
+
+#menubutton:hover{
+    color: red;
+    text-decoration: none;
+}
+.motto{
+    margin-top:20px;
+    font-size: 32px;
+    animation: slide-in 1.5s;
+}
+
+#hard, #hard:hover{
+    color: red;
+    text-decoration: none;
+}
+
+#puzzle1{
+    left: 120px;
+    background-color: rgba(255, 255, 255, 0.49);
+    border-left: solid;
+    border-width: 5px;
+    
+}
+
+#puzzle1, #puzzle2, #puzzle3, #puzzle4, #puzzle5{
+    position:absolute;
+    top:850px;
+    background-color: rgba(255, 255, 255, 0.49);
+    padding:20px;
+    height: 450px;
+    width: 200px;
+    color: black;
+    font-weight: bolder;
+    font-size: 24px;
+ border-top: solid;
+    border-bottom: solid;
+    border-width: 5px;
+    
+}
+
+
+#story1{
+    background-color: white;
+    margin-left: 0px;
+    width: 595px !important;
+}
+
+#story1, #story2, #story3, #story4, #story5{
+    display:none;
+    padding-top: 70px;
+    margin-top: 46px;
+    padding-left: 0px;
+    width: 600px;
+    background-color: white;
+    height: 180px;
+    z-index: 5;
+    position:absolute;
+    margin-left: -20px;
+    color: #000000;
+
+}
+
+#puzzle2{
+    left: 320px;
+    background-color: rgba(139, 11, 11, 0.49);
+
+}
+
+#story2{
+
+    margin-left: -20px;
+    background-color: rgb(139, 11, 11);
+
+}
+
+#puzzle3{
+    left: 520px;
+    background-color: rgba(255, 255, 255, 0.49);
+
+
+}
+
+#story3{
+
+    margin-left: -220px;
+    background-color: white;
+
+}
+
+#puzzle4{
+    left: 720px;
+    background-color: rgba(139, 11, 11, 0.49);
+
+}
+
+#story4{
+
+    margin-left: -420px;
+    background-color: rgb(139, 11, 11);
+}
+
+
+#puzzle5{
+    left: 920px;
+    background-color: rgba(255, 255, 255, 0.49);
+    border-right: solid;
+    border-width: 5px;
+
+}
+
+#story5{
+
+    margin-left: -420px;
+    background-color: white;
+    width: 595px !important;
+}
+
+#pic1, #pic2, #pic3, #pic4, #pic5{
+    filter: grayscale(100%);
+}
+
+.name{
+    padding-bottom: 10px;
+}
+
+.title{
+    top: 750px;
+left: 400px;
+    position: absolute;
+    font-size: 60px;
+
+}
+
+.final{
+    padding-bottom: 750px;
+}
+
+#student-stories{
+    position: absolute;
+    top: 720px;
+}
+
+#up{
+    position: absolute;
+    top: 1200px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    background-image: url(../Button%20No%20Hover%20.png);
+    background-size: 100px 100px;
+     border-radius: 50%;
+    border-width: 0px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+#up:hover{
+    background-image: url(../Button%20Hover%20.png);
+}
+#up:active, #up:focus{
+    border-width: 0px;
+    outline: none;
+}
+
+

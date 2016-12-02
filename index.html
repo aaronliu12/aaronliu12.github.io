@@ -25,32 +25,62 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="assets/js/button.js"></script> 
+    <script type="text/javascript" src="dist/js/stories.js"></script>
+      
+    <script>
+      window.onscroll = function() {myFunction()};
+
+        function myFunction() {
+            if (document.body.scrollTop < 650) {
+                $('#up').css('display', 'block');
+            } 
+            if (document.body.scrollTop < 650) {
+        }
+        }
+        
+
+           function up() {  
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+           }
+            
+
+      
+    </script>  
   </head>
 
   <body>
 
     <div class="site-wrapper">
-
       <div class="site-wrapper-inner">
+<div class="fullscreen-bg">
+    <video muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+        <source src="FoggyBund.mp4" type="video/mp4">
+    </video>
 
+</div>
         <div class="cover-container">
-
           <div class="masthead clearfix">
             <div class="inner">
-              
-
+                  <img src="App-Ark%20Name%202%20White.png" height="100" width="500" id="logo">
             </div>
+              <div class="motto">
+              Work <a id="hard">Hard</a>. Dream <a id="hard">Big</a>.
+              </div>
           </div>
             <div class="student-stories">
-                Student<br>
-               &nbsp;&nbsp;&nbsp;&nbsp; Stories<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<div class="circle"><a class="arrow">&darr;</a></div>
+                <form action="#student-stories">
+                    <input type="submit" value="Student Stories" id="words" />
+                </form>
+                <button onclick="myfunction()" id="menubutton">Menu</button>
             </div>
             
 
@@ -59,19 +89,51 @@
           </div>
 
           <div class="mastfoot">
+              
             <div class="inner">
               <nav>
                 <ul class="nav masthead-nav">
-                    <li class="active"><img src="Company%20Name.png" height="150" width="230" id="logo"></li>
+                    <li class="padding"></li>
                   <li><a class="item" href="#">Services</a></li>
-                  <li><a class="item" href="#">About</a></li>
+                  <li><a class="item" href="About.html">About</a></li>
                   <li><a class="item" href="#">Careers</a></li>
                   <li><a class="item" href="#">Shanghai</a></li>   
-                  <li><a class="item" href="#">Contact</a></li>  
-                  <li class="lowerlogo"><img src="Logo.png" height="100" width="100" id="logo"></li>    
+                  <li><a class="item" href="contact.html">Contact</a></li>  
+                  <li class="lowerlogo"><img src="Logo.png" height="100" width="100"></li>    
                 </ul>
               </nav>
             </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+      <a id="student-stories"></a>
+      
+         <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+          <div class="masthead clearfix">
+
+          </div>
+            <div class="title">Student Stories</div>
+
+          <div class="inner cover">
+              <div id="puzzle1"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic1"> <div id="story1">Lorem ipsum</div></div>
+              <div id="puzzle2"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic2"><div id="story2">Lorem ipsum</div></div>
+              <div id="puzzle3"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic3"><div id="story3">Lorem ipsum</div></div>
+              <div id="puzzle4"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic4"><div id="story4">Lorem ipsum</div></div>
+              <div id="puzzle5"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic5"><div id="story5">Lorem ipsum</div></div>
+              
+             <button id="up" onclick="up()"/></button> 
+          </div>
+            
+          <div class="final">
+            
           </div>
 
         </div>
@@ -89,4 +151,5 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
+    
 </html>
