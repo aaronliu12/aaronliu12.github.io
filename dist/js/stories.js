@@ -16,7 +16,7 @@
             });
       $(function() {
             $('#puzzle2').hover( function(){
-                $(this).css('background-color', 'rgb(139, 11, 11)');
+                $(this).css('background-color', 'white');
                 $('#puzzle3').css('z-index', '0');
                 $('#puzzle4').css('z-index', '0');
                 $('#story2').show();
@@ -24,7 +24,7 @@
                 
             },
             function(){
-                $(this).css('background-color', 'rgba(139, 11, 11, .49)');
+                $(this).css('background-color', 'rgba(255, 255, 255, 0.49)');
                 $('#story2').hide();
                 $('#puzzle3').css('z-index', '5');
                 $('#puzzle4').css('z-index', '5');
@@ -51,14 +51,14 @@
           
            $(function() {
             $('#puzzle4').hover( function(){
-                $(this).css('background-color', 'rgb(139, 11, 11)');
+                $(this).css('background-color', 'white');
                 $('#story4').show();
                 $('#puzzle3').css('z-index', '0');
                 $('#puzzle2').css('z-index', '0');
                 $('#pic4').css('filter', 'grayscale(0%)')
             },
             function(){
-                $(this).css('background-color', 'rgba(139, 11, 11, .49)');
+                $(this).css('background-color', 'rgba(255, 255, 255, 0.49)');
                 $('#story4').hide();
                 $('#puzzle3').css('z-index', '5');
                 $('#puzzle2').css('z-index', '5');

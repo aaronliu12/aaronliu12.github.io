@@ -1,0 +1,79 @@
+.mastfoot{
+    background-color:rgb(211, 211, 211) !important;
+    position: fixed !important;
+}
+
+.student-stories{
+    position: fixed;
+}
+
+.about{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    position: relative;
+    height: 110px;
+    border-top: solid;
+    border-color: black;
+    border-width: 1px;
+    text-align: left;
+    
+}
+
+@font-face {
+  font-family: 'Scriptin';
+  src: url('littlelordfontleroynf.ttf');
+}
+
+.masthead{
+    margin: 50px;
+    margin-top: 100px;
+    width: 90%;
+    text-align: left !important;
+    top:100px !important;
+    font-size: 40px;
+    left: 5% !important;
+}
+
+.script{
+    font-family: 'Scriptin';
+
+}
+
+.chairman{
+        margin-bottom: 30px;
+}
+
+.letter1{
+    font-size: 40px;
+    font-family: 'Scriptin';
+}
+
+.letter{
+    padding: 50px;
+    border: white;
+    border-left-style: solid;
+    border-width: 5px;
+    background-color: rgba(110, 115, 118, 0.3);
+}
+
+.letter2{
+    font-family: 'Scriptin';
+    font-size: 50px;
+}
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: initial;
+      width: 90%;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .cover-container {
+    width: 100%;
+  }
+}

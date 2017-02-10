@@ -1,0 +1,177 @@
+.row{
+    position: relative;
+    margin-left: 50px;
+    width: 1125px;
+    margin-top: 200px;
+    
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 6% auto; /* 15% from the top and centered */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#block1:hover, #block3:hover, #block5:hover, #block7:hover, #block9:hover{
+    cursor:pointer;
+}
+
+.quotes{
+    top: 100px;
+    height: 700px;
+    width: 113.5%;
+    background-color: #000000;
+    margin-left:-50px;
+
+}
+
+
+#quote0, #quote1, #quote2, #quote3, #quote4, #quote5, #quote6, #quote7, #quote8, #quote9{
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    
+
+    background-size: 100px 100px;
+     border-radius: 100%;
+    border-width: 2px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#quote0{
+background-image: url(../logo.jpg);
+margin-top: 0px;
+}
+
+#quote1{
+    margin-left: 200px;
+    margin-top: -100px;
+    background-image: url(../assets/img/Stefan%20face);
+
+}
+
+#quote1,#quote2, #quote3, #quote4, #quote5, #quote6, #quote7, #quote8, #quote9{
+    background-position: center;
+    background-size: 100px 100px;
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    margin-top: -100px;
+}
+
+#quote2{
+    margin-left: 300px;
+    background-image: url(../assets/img/Ting%20Wei.jpg);
+
+}
+
+#quote3{
+    margin-left: 400px;
+    background-image: url(../assets/img/Ting%20Wei.jpg);
+
+}
+#quote4{
+    margin-left: 500px;
+    background-image: url(../assets/img/Ting%20Wei.jpg);
+
+}
+#quote5{
+    margin-left: 600px;
+    background-image: url(../assets/img/Ting%20Wei.jpg);
+}
+#quote6{
+    margin-left: 700px;
+    background-image: url(../assets/img/Ting%20Wei.jpg);
+
+}
+#quote7{
+    margin-left: 800px;
+    background-image: url(../assets/img/Ting%20Wei.jpg);
+
+}
+#quote8{
+    margin-left: 900px;
+    background-image: url(../assets/img/Ting%20Wei.jpg);
+}
+
+#quote9{
+    margin-left: 1000px;
+    background-image: url(../assets/img/Ting%20Wei.jpg);
+
+}
+
+
+#actual-quote0, #actual-quote1, #actual-quote2, #actual-quote3, #actual-quote4, #actual-quote5, #actual-quote6, #actual-quote7, #actual-quote8, #actual-quote9{
+    text-align: left;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    font-size: 40px;
+    width: 300px;
+    margin-left: 120px;
+}
+
+#actual-quote1, #actual-quote2, #actual-quote3, #actual-quote4, #actual-quote5, #actual-quote6, #actual-quote7, #actual-quote8, #actual-quote9{
+    display: none;
+}
+
+
+
+#dottedline{
+    margin-top: -600px;
+    height: 400px;
+}
+
+.hardsell{
+    margin-left: 600px;
+    margin-top: -450px;
+    font-size: 25px;
+}
+
+.personbuttons{
+    position:relative;
+    top: 100px;
+}
+
+.cover{
+    padding: 0px !important;
+}
+
+html, body{
+    background-color: #404040 !important;
+}

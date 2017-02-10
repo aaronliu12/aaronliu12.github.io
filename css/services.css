@@ -1,0 +1,87 @@
+
+
+.services{
+    top: 600px !important;
+    background-color: rgba(0, 0, 0, 0.30);
+    width: 1250px;
+    left: 0px;
+    height: 110px;
+    position: absolute;
+    border-top: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: left;
+}
+
+#myCarousel{
+    left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.filler{
+    margin-top: 200px;
+}
+
+.Servicestitle{
+    top:60px;
+    left: auto;
+    right:auto;
+    position: absolute;
+    font-size: 46px;
+}
+
+.mastfoot{
+    background-color: rgb(211, 211, 211) !important;
+    position: fixed !important;
+}
+
+.student-stories{
+    position:fixed !important;
+    z-index: 10;
+}
+
+.jumbotron {
+background: inherit;
+color: #FFF;
+top: 50px;
+    left: 50px;
+position: absolute;
+}
+.jumbotron-sm { padding-top: 0px;
+padding-bottom: 0px; }
+.jumbotron small {
+color: #FFF;
+}
+
+.carousel-inner{
+    height: 500px;
+    width: 700px;
+}
+
+.carousel-caption{
+    top:200px;
+}
+
+.site-wrapper{
+    width: 100%;
+    display: table;
+}
+
+.cover{
+    border-width: 5px;
+    border-style: solid;
+    margin-top: 100px;
+    padding-right: 300px;
+    width: 150%;
+    left: -200px;
+    
+}
+
+.cover-container{
+    margin-left: 50px;
+}
+
+.carousel-caption{
+    right: 100px;
+}

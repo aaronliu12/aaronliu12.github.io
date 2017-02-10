@@ -1,3 +1,22 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "aaron@app-ark.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you, we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +28,7 @@
     <meta name="author" content="">
     <link rel="icon" href="logo.png">
 
-    <title>App Ark</title>
+    <title>Contact - App-Ark</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +38,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
+      <link href="css/contact.css" rel="stylesheet">
       
     
 
@@ -32,111 +52,89 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="assets/js/button.js"></script> 
+      <script type="text/javascript" src="dist/js/index.js"></script>
  
+      
+
   </head>
 
   <body>
       
     <div class="site-wrapper">
-<form name="contactform" method="post" action="send_form_email.php" style="left:200px; top:200px; position:fixed;">
- 
-<table width="450px">
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="first_name">First Name *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="first_name" maxlength="50" size="30">
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="last_name">Last Name *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="last_name" maxlength="50" size="30">
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="email">Email Address *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="email" maxlength="80" size="30">
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="telephone">Telephone Number</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="telephone" maxlength="30" size="30">
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="comments">Comments *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td colspan="2" style="text-align:center">
- 
-  <input type="submit" value="Submit">   <a href="http://www.freecontactform.com/email_form.php">Email Form</a>
- 
- </td>
- 
-</tr>
- 
-</table>
- 
-</form>
-      <div class="site-wrapper-inner">
 
+      <div class="site-wrapper-inner">
+<div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">
+                    Contact us <small>Feel free to contact us</small></h1>
+            </div>
+        </div>
+        <legend></legend>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">
+                                Subject</label>
+                            <select id="subject" name="subject" class="form-control" required="required">
+                                <option value="na" selected="">Choose One:</option>
+                                <option value="service">Job Enquiry</option>
+                                <option value="suggestions">Suggestions</option>
+                                <option value="product">Student Inquiry</option>
+                                <option value="product">General Question</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Message</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                            Send Message</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <form>
+            <address>
+                <strong><img src="apparkLogo.png" id="logo2" width="245" height="85"/></strong><br><br>
+                398 HanKouLu<br>
+                Shanghai, Huangpu Area<br>
+                <abbr title="Phone">
+                    P:</abbr>
+                (123) 456-7890
+            </address>
+
+            </form>
+        </div>
         <div class="cover-container">
           <div class="masthead clearfix">
 
@@ -152,18 +150,38 @@
           <div class="inner cover">
 
           </div>
-
+            <div class="final contact"><a href="https://www.facebook.com/apparkedu/?fref=ts"><img id="facebook" src="assets/img/Facebook.png" height="50" width="50"/></a><a href="https://www.linkedin.com/company/shanghai-pingyuan-zhitong-information-consulting-co-"><img id="linkedin" src="assets/img/LinkedIn.png" height="50" width="50"/></a><img id="wechat" src="assets/img/Wechat.png" height="50" width="50"/><img class="QR" src="QR%20Code.jpg" /> </div>
+            <div class="filler"></div>
           <div class="mastfoot">
               
             <div class="inner">
               <nav>
                 <ul class="nav masthead-nav">
                     <li class="padding"></li>
-                  <li><a class="item" href="#">Services</a></li>
-                  <li><a class="item" href="#">About</a></li>
-                  <li><a class="item" href="#">Careers</a></li>
-                  <li><a class="item" href="#">Shanghai</a></li>   
+                    <div></div>
+                    <li><a class="item"  onclick="dropdown()">About</a></li>
+                <div class="dropdown-content" id="dropdown-content" >
+    <a href="#">Dear Students</a>
+    <a href="About.html">Brief History</a>
+    <a href="#">Team Structure</a>
+  </div>
+                    <li><a class="item" onclick="dropdown2()" >Services</a></li>
+              <div class="dropdown-content" id="dropdown-content2">
+    <a href="#">College Consulting</a>
+    <a href="#">Additional Features</a>
+    <a href="#">Recent Results</a>
+  </div>
+
+
+                  <li><a class="item" onclick="dropdown3()">Careers</a></li>
+                     <div class="dropdown-content" id="dropdown-content3" >
+    <a href="#">Positions</a>
+    <a href="#">Team Dynamics</a>
+    <a href="FAQ.html">FAQ</a>
+  </div>
+
                   <li><a class="item" href="contact.html">Contact</a></li>  
+                    <div></div>
                   <li class="lowerlogo"><img src="Logo.png" height="100" width="100"></li>    
                 </ul>
               </nav>
@@ -175,6 +193,9 @@
       </div>
 
     </div>
+
+        </div>
+      </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

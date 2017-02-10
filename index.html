@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="logo.png">
 
-    <title>App Ark</title>
+    <title>Home - App-Ark</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
+      <link href="css/index.css" rel="stylesheet">
       
     
 
@@ -35,26 +36,9 @@
     <![endif]-->
     <script src="assets/js/button.js"></script> 
     <script type="text/javascript" src="dist/js/stories.js"></script>
-      
-    <script>
-      window.onscroll = function() {myFunction()};
+    <script type="text/javascript" src="dist/js/index.js"></script>
 
-        function myFunction() {
-            if (document.body.scrollTop < 650) {
-                $('#up').css('display', 'block');
-            } 
-            if (document.body.scrollTop < 650) {
-        }
-        }
-        
 
-           function up() {  
-        $("html, body").animate({ scrollTop: 0 }, "fast");
-           }
-            
-
-      
-    </script>  
   </head>
 
   <body>
@@ -70,10 +54,10 @@
         <div class="cover-container">
           <div class="masthead clearfix">
             <div class="inner">
-                  <img src="App-Ark%20Name%202%20White.png" height="100" width="500" id="logo">
+                  <img src="App-Ark%20Name%202%20White.png" id="logo">
             </div>
               <div class="motto">
-              Work <a id="hard">Hard</a>. Dream <a id="hard">Big</a>.
+                  <span id="animate1">WORK <a id="hard">HARD</a>.</span><span id="animate2">  &nbsp;DREAM <a id="hard2">BIG</a>.</span> 
               </div>
           </div>
             <div class="student-stories">
@@ -87,6 +71,7 @@
           <div class="inner cover">
 
           </div>
+            
 
           <div class="mastfoot">
               
@@ -94,11 +79,30 @@
               <nav>
                 <ul class="nav masthead-nav">
                     <li class="padding"></li>
-                  <li><a class="item" href="#">Services</a></li>
-                  <li><a class="item" href="About.html">About</a></li>
-                  <li><a class="item" href="#">Careers</a></li>
-                  <li><a class="item" href="#">Shanghai</a></li>   
+                    <div></div>
+                    <li><a class="item"  onclick="dropdown(this)">About</a></li>
+                <div class="dropdown-content" id="dropdown-content" >
+    <a href="dear.html">Dear Students</a>
+    <a href="About.html">Brief History</a>
+    <a href="#">Team Structure</a>
+  </div>
+                    <li><a class="item" onclick="dropdown2()" >Services</a></li>
+              <div class="dropdown-content" id="dropdown-content2">
+    <a href="#">College Consulting</a>
+    <a href="#">Additional Features</a>
+    <a href="#">Recent Results</a>
+  </div>
+
+
+                  <li><a class="item" onclick="dropdown3()">Careers</a></li>
+                     <div class="dropdown-content" id="dropdown-content3" >
+    <a href="#">Positions</a>
+    <a href="#">Team Dynamics</a>
+    <a href="FAQ.html">FAQ</a>
+  </div>
+
                   <li><a class="item" href="contact.html">Contact</a></li>  
+                    <div></div>
                   <li class="lowerlogo"><img src="Logo.png" height="100" width="100"></li>    
                 </ul>
               </nav>
@@ -120,27 +124,233 @@
           <div class="masthead clearfix">
 
           </div>
-            <div class="title">Student Stories</div>
 
           <div class="inner cover">
-              <div id="puzzle1"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic1"> <div id="story1">Lorem ipsum</div></div>
+              
+              <!--<div id="puzzle1"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic1"> <div id="story1">Lorem ipsum</div></div>
               <div id="puzzle2"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic2"><div id="story2">Lorem ipsum</div></div>
               <div id="puzzle3"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic3"><div id="story3">Lorem ipsum</div></div>
               <div id="puzzle4"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic4"><div id="story4">Lorem ipsum</div></div>
-              <div id="puzzle5"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic5"><div id="story5">Lorem ipsum</div></div>
+              <div id="puzzle5"><div class="name">Billy Zhang</div><img src="IMG_1017%20copy.jpg" height="150" width="110" id="pic5"><div id="story5">Lorem ipsum</div></div>-->
+
+<div class="row">
+ <div class="title">WHAT BEING SEVENTEEN REALLY MEANS<a id="grid-title">STUDENT STORIES</a></div>
+    <div class="col-sm-4"><div id="fashionfilm1">Valentina</div><img src="assets/img/Fashion%20Squared%20B&W.png" height="375" width="375" id="block1" onmouseover="fashionover(this, 'move')" onmouseout="fashionback(this)" onclick="modal1()"/></div>
+    <div class="col-sm-4"><div id="block2"></div></div>
+      <div class="col-sm-4"><div id="fashionfilm2">Jason</div><img src="assets/img/Computer%20Science%20Squared%20B&W.png" height="375" width="375" onmouseover="csover(this)" onmouseout="csback(this)" id="block7" onclick="modal4()"></div>
+  <div class="col-sm-4"><div id="block4"></div></div>
+      <div class="col-sm-4"><div id="Cindy">Cindy</div><img src="assets/img/Psychology%20Squared%20B&W.png" height="375" width="375" onmouseover="psychologyover(this)" onmouseout="psychologyback(this)"id="block5" onclick="modal3()"></div>
+  <div class="col-sm-4"><div id="block6"></div></div>
+      <div class="col-sm-4"><div id="fashionfilm3">Hayden</div><img src="assets/img/Math%20Squared%20B&W.png" height="375" width="375" onmouseover="filmover(this)" onmouseout="filmback(this)" id="block3" onclick="modal2()"></div>
+
+  <div class="col-sm-4"><div id="block8"></div></div>
+  <div class="col-sm-4"><div id="fashionfilm4">Crystal</div><img src="assets/img/Music%20Squared%20B&W.png" height="375" width="375" onmouseover="musicover(this)" onmouseout="musicback(this)" id="block9" onclick="modal5()"></div>
+<div class="lowertitle">CRAFTING INNOVATIVE EXPRESSIONS IN A DIGITAL WORLD</div>
+                  <div class="quotes">
+                    <div class="personbuttons"> 
+             <button id="quote0" class="quotejava" onmouseover="quote()"></button> 
+            <button id="quote1" class="quotejava" onmouseover="quote1()"></button>
+            <button id="quote2" class="quotejava" onmouseover="quote2()"></button>
+            <button id="quote3" class="quotejava" onmouseover="quote3()"></button>
+            <button id="quote4" class="quotejava" onmouseover="quote4()"></button>
+            <button id="quote5" class="quotejava" onmouseover="quote5()"></button>
+            <button id="quote6" class="quotejava" onmouseover="quote6()"></button>
+            <button id="quote7" class="quotejava" onmouseover="quote7()"></button>
+            <button id="quote8" class="quotejava" onmouseover="quote8()"></button>
+            <button id="quote9" class="quotejava" onmouseover="quote9()"></button>
+                        </div> 
+                <div class="actualquotes">     
+                <div id="actual-quote0" class="actual-quotes">"App Ark is the greatest company ever." - Aaron</div>
+                <div id="actual-quote1" class="actual-quotes">"Before I came to China I did not have a Chinese girlfriend." - Stefan</div>
+                <div id="actual-quote2" class="actual-quotes">"Hangzhou is better than Shanghai." - Ting</div> 
+                <div id="actual-quote3" class="actual-quotes">"Hangzhou is better than Shanghai." - Ting</div> 
+                <div id="actual-quote4" class="actual-quotes">"Hangzhou is better than Shanghai." - Ting</div> 
+                <div id="actual-quote5" class="actual-quotes">"Hangzhou is better than Shanghai." - Ting</div> 
+                <div id="actual-quote6" class="actual-quotes">"Hangzhou is better than Shanghai." - Ting</div> 
+                <div id="actual-quote7" class="actual-quotes">"Hangzhou is better than Shanghai." - Ting</div>
+                <div id="actual-quote8" class="actual-quotes">"Hangzhou is better than Shanghai." - Ting</div> 
+                <div id="actual-quote9" class="actual-quotes">"Not on my watch." - Ting</div>
+                </div>     
+             </div> 
+            <img src="assets/img/dotted%20line.png" id="dottedline"/>
+                    <div class="hardsell">We are young and innovative.<br>We thrive on teamwork.<br> We develop experiences not resumes.<br>We strategize thoroughly, case-by-case.<br><br>We work to assist all students.</div>  
+
+            
+</div>
               
-             <button id="up" onclick="up()"/></button> 
-          </div>
-            
-          <div class="final">
-            
-          </div>
+             <button id="up" onclick="up()"></button> 
+              
 
+              <div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="stories"><h1>Valentino <small>International Studies</small></h1>
+        
+        
+        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/aDUnDkpM01s" frameborder="0" allowfullscreen></iframe></div>
+        <br>
+        <div class ="Valentina"><p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2>When I was younger, it seemed like I could not change anything about myself, never mind things outside me...</h2> I may have grown taller, but every year my clothes were still the same color, and my hair tied in the same way. With my standard assortment of practical T-Shirts and jeans it seemed like at school, I wear one uniform…at home, I just wear another. Putting on something fashionable however, was like an escape from this dreary loop.
+        </p>
+        <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I learned that myself when I became leader of the Fashion Club in my high school. In the beginning, I just wanted a reason and means to finally change something about myself, even if it was just my appearance and specifically my clothing. But there was something more awesome at work, and the longer I worked in this club and stuck to my role, the more I appreciated. I particularly enjoyed the street-snaps. They were some of the best content generated and I started to understand why.
+        </p>
+        <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It was all the glory of the runway in a formal fashion show, with the practicality of everyday wear on the street. It showed something both fashionable and sensibly matched in terms of color, material, and style. There was also a great sense of purpose in identifying these elements as essential components for Fashion. I started to understand Fashion as one of those rare fields where substance and style aren’t opposites. They are just the duality of a core or essence.
+            </p>
+        <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As I began to identify, pick, and choose between these elements of fashion and deliberately construct my own selections and craft personal critiques, I finally began to feel something new. There was a choice, and a voice: an outlet for expression that was finally mine. It is really important to me and something I value just as much if not more than my actual affinity and appreciation for fashion. And with this, I can finally create my own unique and personal style.    
+        </p>    
+        
         </div>
+            
+  </div>
 
-      </div>
+</div>
+ </div>                  
+              
+            <div id="myModal2" class="modal">
 
-    </div>
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="stories"><h1>Hayden <small>Math</small></h1>
+        
+        
+        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/nbKtKXhgRyw" frameborder="0" allowfullscreen></iframe></div>
+        <br>
+        <div class ="Valentina">
+        <p>
+        <h2>It was midnight. Darkness enveloped the whole neighborhood; the house was so quiet that the ticking of a clock could be heard...</h2> Everyone had gone to bed but, strangely, a soft yet rhythmic sound drifted throughout the hallway. Suddenly, my bedroom door was opened.
+        </p>
+        <p>
+        “Is everything okay, son?” It was my father, a concerned look on his face.
+        </p>
+        <p>
+        “Of course, dad!”
+        </p>
+        <p>
+        “Then where did that weird sound come from?”  
+        </p>   
+        <p>
+        “Sorry, dad – I was practicing some rap songs!”   
+        </p>   
+        <p>
+        Yes, I had been a “nocturnal rapper” for two years. Every night before going to sleep, I would fire up my iPod, put on my earphones, and enjoy rapping to myself with my voice down.  
+        </p>   
+        <p>
+        When I first heard the song “Refuse To Listen” by a rapper from Taiwan, the energetic lyrics instantly attracted me and I fell in love with the special genre of music characterized by its powerful rhymes. Gradually, rap blended into my blood and I was no longer satisfied with simply listening. I wanted to rap myself!  
+        </p>   
+        <p>
+        However, finding time to practice rapping was a problem. I had classes during the day and homework at night. The only time left was the thirty minutes before bed. It didn’t sound so bad to sacrifice a little sleep for my rap dream, so I developed this quirky habit of nocturnal rapping.
+        </p>    
+        <p>
+        As time passed, my passion for rap blossomed. I started to record my own covers of rap songs, posting them online to share with others. I performed in talent shows and school festivals. And, driven by a desire to comprehend the background of rap music, I also took an online university course to understand the role of black culture and history on the evolution of hip-hop. It was “nocturnal rapping” that helped set me down this path of musical discovery.
+        </p>
+
+            
+        </div>
+            
+  </div>
+
+</div>
+ </div>
+              
+                <div id="myModal3" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="stories"><h1>Cindy <small>Psychology</small></h1>
+        
+        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/jyNfaOG69W4" frameborder="0" allowfullscreen></iframe></div>
+        <br>
+        <div class ="Valentina"><p>
+        <h2>What if 14 minutes of our lives can change how we choose to live?</h2>
+        </p>
+        <p>
+        This change started the day I saw the 14-minute film: My Name is Lalin. When Lalin removed her mask and finally showed her acned face to viewers, I was so moved by her courage. She gave up her online fame in order to stop living a lie. As many people are now trying hard to make themselves look prettier on social networks, this film gave me a strong visual image of one girl’s inner change—she comes to accept that it’s just as important to identify with who she is and not who she desires to be.
+        </p>
+        <p>
+        Good short films tend to catch viewer’s eyes quicker because we do not even have a chance to feel bored within the first few minutes. With technical elements like the mask, I’ve come to appreciate that these art pieces are clever ways to express the issues that matter to people most. Encouraged by their simplicity, I became the leader of my school’s short film last April. I have had the opportunity to be an actor, scriptwriter, producer, and director.
+        </p>
+        <p>
+        I wrote and directed #TAGS, hoping to break the stereotypes we often find ourselves in, in order to self-identify without labels. As this is a message I want to share with my school community, I decided to be one of the actresses. Sometimes, words written by me should also be said by me. To show the power of people’s judgments, I also created strong visual images by putting actual stickers on my body with stereotypical words such as “party animal” and “instagirl.” They offer the audience a more dramatic feeling to people’s judgments.   
+        </p>   
+        <p>
+        I will continue filming, constantly inspired to focus on students’ inner voices, and how they affect our community.    
+        </p>   
+            
+        </div>
+            
+  </div>
+
+</div>
+ </div>    
+              
+                        <div id="myModal4" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      <div class="stories"><h1>Jason <small>Computer Science</small></h1>
+        
+        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/1Fr7ZkFnujI" frameborder="0" allowfullscreen></iframe></div>
+        <br>
+        <div class ="Valentina"><p>
+        <h2>Starting from ninth grade, I’ve carried my laptop to school every day to keep up with my assignments and projects...</h2> The extra 2-3 kilograms on my back seemed insignificant at first, but, combined with my textbooks and notebooks, it really started to take a toll on my shoulders. I wasn’t the only one; most of my friends also bring their laptops to school. For those who use single-strapped bags, those 2-3 kilograms can be especially agonizing.
+        </p>
+        <p>
+        From that daily weight, I began forming my first Science and Technology Innovation project to explore an alternative approach: a light, easy-to- carry laser projection keyboard based on computer vision technology and laser triangulation measuring. With the help of a mentor, I created the hardware system with keyboard pattern projector, digital camera with infrared light filter, and infrared line laser. I then created the software system based on OpenCV (Open Source Computer Vision Library) and Visual Studio platform. The laser is monochromatic, bright, and directional, so when fingers are pressed, the line laser that is parallel to the surface is being reflected. The digital camera catches these reflections with infrared light filter, blocking visible light and passing infrared light. Computer software is then used to process the signals and realize the input of virtual laser keyboard and virtual laser touchpad.
+        </p>
+        <p>
+        My keyboard design isn’t perfect. The calibration needs to be done very finely in order to achieve maximum accuracy, and too fast of a typing speed can sometimes create a keystroke registration error. Nonetheless, it was a milestone experience for me to have turned my occasionally sore shoulders into a yearlong adventure of science and inquiry. I had been a student for nearly my whole life, but this was the first time I had felt a true passion for learning.
+        </p>
+   
+            
+        </div>
+            
+  </div>
+
+</div>
+ </div>   
+              
+                        <div id="myModal5" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      <div class="stories"><h1>Crystal <small>Media Studies</small></h1>
+        
+        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/Fp0xS9W6x7A" frameborder="0" allowfullscreen></iframe></div>
+        <br>
+        <div class ="Valentina"><p>
+        <h2>Starting from when I was six, I attended a performing arts academy where I specialized in vocal performance...</h2>Singing was a hands-on science: we did experiments with breathing, studied the acoustic resonance of the mouth, and mapped out how sound vibrations move through the bones and muscles of the face. These technical details fascinated me: So, this is what creates the music.
+        </p>
+        <p>
+        As I grew up, however, something beyond the technical details began to capture my attention. “All About That Bass” talked about body image in a shockingly open way; I began to reconsider what “Hotel California”, one of my favorite songs, was really about. As I grew as a musician, I learned to ask questions beyond melody and musical form. Why does this song exist? What is it trying to say? I began paying more attention to the voice within the voice, the message within the catchy vocals. I came to see that melodies and words could challenge normalized lines of thought and shed light on difficult topics like drug abuse.
+        </p>
+        <p>
+        Not content to simply listen to the works of others, I’ve channeled my realization about the power of creative media into my own original extended play called “EXILE.” Through each song’s composition and words, I share my feelings of alienation about leaving my small hometown to move to China’s fastest-paced city: Shanghai. I chose this topic because integrating into Shanghai as a foreigner is a challenging experience that many people go through when pursuing better educational and career opportunities. With each take I do, I not only think Am I in tune? or Did I hit that note? First and foremost, I think about whether or not I’m successfully capturing the difficult emotions that millions of us in this city have felt at some point.
+        </p>
+   
+            
+        </div>
+            
+  </div>
+
+</div>
+                            
+
+            
+
+            
+             
+
+      
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

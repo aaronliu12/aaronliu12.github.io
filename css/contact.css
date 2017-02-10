@@ -1,0 +1,64 @@
+.jumbotron {
+background: inherit;
+color: #FFF;
+border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 0px;
+padding-bottom: 0px; }
+.jumbotron small {
+color: #FFF;
+}
+.h1 small {
+font-size: 24px;
+}
+
+.well{
+    background: inherit !important;
+}
+
+@media only screen and (max-width: 480px){
+    .contact{
+    top: auto !important;    
+    width: 100%;
+    left: 0px;
+    height: 110px;
+    position: absolute;
+    border-top: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: left;
+    }
+}
+
+.contact{
+    top: 530px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    left: 0px;
+    height: 110px;
+    position: absolute;
+    border-top: solid;
+    border-color: black;
+    border-width: 1px;
+    text-align: left;
+}
+
+.contact{
+    margin-top: 100px;   
+}
+
+.mastfoot{
+    background: rgb(211, 211, 211) !important;
+    position:fixed !important;
+    text-align: center;
+}
+
+.student-stories{
+    position:fixed !important;
+
+    z-index: 10;
+}
+
+.form-control{
+    z-index: 0 !important;
+}
