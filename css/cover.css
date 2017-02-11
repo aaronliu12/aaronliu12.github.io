@@ -218,6 +218,7 @@ font-family: 'Quicksand';
   background-repeat:   repeat;
   background-position: center center;
     height: 100px;
+    font-family: 'Quicksand';
 }
 .cover-container {
   margin-right: auto;
@@ -328,9 +329,21 @@ background-color: rgba(255, 255, 255, 0.4);
 
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1100px) {
     #block1, #block3, #block5, #block7, #block9{
-        
+        height: 250px;
+        width: 250px;
+    }
+    #block2, #block4, #block6, #block8{
+    height: 250px !important;
+    width: 250px !important;
+ 
+}
+    #fullrows{
+        width:800px !important;
+    }
+    .title{
+        width: 800px !important;
     }
 }
 
@@ -650,7 +663,6 @@ background-color: rgba(0, 0, 0, 0.5);
 .title{
     margin-top: 0%;
     font-size: 30px;
-    width: 1200px;
     color: whitesmoke;
     font-weight: bolder;
     text-align: left;
@@ -660,6 +672,7 @@ background-color: rgba(0, 0, 0, 0.5);
 .col-sm-4{
     margin-right: 0px !important;
     margin-left: 0px;
+
 }
 
 #grid-title:hover, #grid-title{
