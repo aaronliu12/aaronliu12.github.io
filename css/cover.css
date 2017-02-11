@@ -95,6 +95,10 @@
     left: 0px;
     position:absolute;
   }
+    .row{
+        width: 100%;
+    }
+
 }
 
 .col-sm-4{
@@ -116,6 +120,10 @@
     left: 0px;
     position:absolute;
   }
+
+    .row{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 480px){
@@ -157,7 +165,9 @@
     .hotline{
         display:none;
     }
+
 }
+
 
 a.item,
 a.item:focus,
@@ -315,9 +325,14 @@ background-color: rgba(255, 255, 255, 0.4);
     width: 250px; /* Must be percentage or pixels for horizontal alignment */
   }
 
+
 }
 
-
+@media (max-width: 950px) {
+    #block1, #block3, #block5, #block7, #block9{
+        
+    }
+}
 
 #logo{
     display: block;
@@ -636,7 +651,7 @@ background-color: rgba(0, 0, 0, 0.5);
     margin-top: 0%;
     font-size: 30px;
     width: 1200px;
-    color: black;
+    color: whitesmoke;
     font-weight: bolder;
     text-align: left;
 
@@ -682,7 +697,7 @@ background-color: rgba(0, 0, 0, 0.5);
     margin-bottom: 100px;
     margin-top: 5px;
     font-size: 30px;
-    margin-left: 15px;
+    margin-left: 0px;
     
 }
 
