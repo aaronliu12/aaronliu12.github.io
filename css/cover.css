@@ -97,6 +97,17 @@
   }
 }
 
+.col-sm-4{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+@media (min-width: 768px){
+.col-sm-4 {
+    width:initial;
+    }
+}
+
 @media (max-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
     width: 100%;
@@ -622,7 +633,6 @@ background-color: rgba(0, 0, 0, 0.5);
 
 
 .title{
-    margin-left: 15px;
     margin-top: 0%;
     font-size: 30px;
     width: 1200px;
