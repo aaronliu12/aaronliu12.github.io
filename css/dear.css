@@ -1,11 +1,22 @@
 .mastfoot{
     background-color:rgb(211, 211, 211) !important;
     position: fixed !important;
+    height: 100% !important;
 }
 
 .student-stories{
     position: fixed;
 }
+
+@media only screen and (max-width: 480px){
+  .masthead {
+    margin: 10px !important;
+      margin-top: 100px !important;
+      margin-bottom: 60px !important;
+  }
+}
+
+
 
 .about{
     background-color: rgba(0, 0, 0, 0.6);
@@ -25,6 +36,7 @@
   font-family: 'Scriptin';
   src: url('littlelordfontleroynf.ttf');
 }
+
 
 .masthead{
     margin: 50px;
@@ -63,17 +75,15 @@
     font-size: 50px;
 }
 
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
+
   .masthead {
     position: initial;
       width: 90%;
-  }
 
-}
 
 @media (min-width: 992px) {
   .cover-container {
     width: 100%;
   }
 }
+      

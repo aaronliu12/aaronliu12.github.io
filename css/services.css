@@ -34,6 +34,7 @@
 .mastfoot{
     background-color: rgb(211, 211, 211) !important;
     position: fixed !important;
+    height: 100% !important;
 }
 
 .student-stories{

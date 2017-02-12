@@ -16,9 +16,17 @@ font-size: 24px;
     background: inherit !important;
 }
 
+@media (max-width: 991px){
+    .contact{
+        top: 850px !important;
+    }
+    .col-sm-12{
+        margin-top: 100px;
+    }
+}
 @media only screen and (max-width: 480px){
     .contact{
-    top: auto !important;    
+    top:900px !important;    
     width: 100%;
     left: 0px;
     height: 110px;
@@ -31,12 +39,12 @@ font-size: 24px;
 }
 
 .contact{
-    top: 530px;
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
+    background-color: rgba(190, 24, 24, 0.72);
     left: 0px;
+    width: 100%;
     height: 110px;
     position: absolute;
+    top: 500px;
     border-top: solid;
     border-color: black;
     border-width: 1px;
@@ -51,6 +59,7 @@ font-size: 24px;
     background: rgb(211, 211, 211) !important;
     position:fixed !important;
     text-align: center;
+    height: 100% !important;
 }
 
 .student-stories{
