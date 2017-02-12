@@ -135,21 +135,19 @@
     display:none;
   }
     #logo{
-        margin-top: 70%;
         height: 40px !important;
         width: 200px !important;
-        margin-left: 20% !important;
+        margin-left: -50px !important;
     }
     .motto{
         font-size:100% !important;
         margin-left: 20% !important;
     }
-    #words{
-        display: none;
-    }
+
     .mastfoot{
         background-color: white !important;
-        height: 450px !important;
+        height: 100% !important;
+        width: 100% !important;
     }
     .padding{
         height: 40px !important;
@@ -168,6 +166,14 @@
     }
     .hotline{
         display:none;
+    }
+    
+    .site-wrapper-inner{
+        
+    }
+    
+    a.item:focus, a.item:hover{
+        color: gray !important;
     }
 
 }
@@ -308,6 +314,12 @@ background-color: rgba(255, 255, 255, 0.4);
     -webkit-animation: fadeIn 1s;
     
 }
+
+.masthead {
+    position: absolute;
+    top: 200px;
+    left:29%;
+  }
 
 
 /*
@@ -823,3 +835,4 @@ background-color: rgba(0, 0, 0, 0.5);
 .modal-content{
     background-color: rgba(255, 255, 255, 0.9) !important;
 }
+

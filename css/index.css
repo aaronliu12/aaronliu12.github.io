@@ -180,3 +180,7 @@ html, body{
     width: 100%
 }
 
+@media only screen and (max-width: 480px){
+    #words{
+        display: none;
+    }
