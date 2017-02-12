@@ -1,21 +1,3 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "aaron@app-ark.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['name'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you, we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +10,7 @@ if(isset($_POST['submit'])){
     <meta name="author" content="">
     <link rel="icon" href="logo.png">
 
-    <title>Contact - App-Ark</title>
+    <title>Team Structure - App-Ark</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +20,7 @@ if(isset($_POST['submit'])){
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
-      <link href="css/contact.css" rel="stylesheet">
+      <link href="css/consulting.css" rel="stylesheet">
       
     
 
@@ -63,83 +45,25 @@ if(isset($_POST['submit'])){
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
-<div class="jumbotron jumbotron-sm">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-lg-12">
-                <h1 class="h1">
-                    Contact us <small>Feel free to contact us</small></h1>
-            </div>
-        </div>
-        <legend></legend>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="well well-sm">
-                <form>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="name">
-                                Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">
-                                Email Address</label>
-                            <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                                </span>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">
-                                Subject</label>
-                            <select id="subject" name="subject" class="form-control" required="required">
-                                <option value="na" selected="">Choose One:</option>
-                                <option value="service">Job Enquiry</option>
-                                <option value="suggestions">Suggestions</option>
-                                <option value="product">Student Inquiry</option>
-                                <option value="product">General Question</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="name">
-                                Message</label>
-                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                placeholder="Message"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-                            Send Message</button>
-                    </div>
-                </div>
-                </form>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <form>
-            <address>
-                <strong><img src="apparkLogo.png" id="logo2" width="245" height="85"/></strong><br><br>
-                398 HanKouLu<br>
-                Shanghai, Huangpu Area<br>
-                <abbr title="Phone">
-                    P:</abbr>
-                (123) 456-7890
-            </address>
 
-            </form>
-        </div>
+<div class="container">
+  <div class="consultingtitle"> <h1>App-Ark College Admissions Consulting</h1> 
+<div class="description">We offer a full package service, which begins as early as sophomore year in high school. Students are guided in their activities, internships, school choices, interviews, and school application. They are also offered writing workshops that will prepare them for college essays. </div>
+</div>
+        <!--<svg height="210" width="200" id="line1">
+  <line x1="-100" y1="00" x2="150" y2="100" style="stroke:rgb(255,0,0);stroke-width:2"></line>      
+</svg>-->
+  
+        
         
 
+  
+    
+      
         <div class="cover-container">
+            
           <div class="masthead clearfix">
-
+<div class="graphics"><img src='assets/img/Editing.png' id="editing"/><img src='assets/img/avatar-with-lines.png' id="character"/></div>
           </div>
             <div class="student-stories">
                 <form action="index.html">
@@ -164,7 +88,7 @@ if(isset($_POST['submit'])){
                 <div class="dropdown-content" id="dropdown-content" >
     <a href="dear.html">Dear Students</a>
     <a href="About.html">Brief History</a>
-    <a href="team.html">Team Structure</a>
+    <a href="#">Team Structure</a>
   </div>
                     <li><a class="item" onclick="dropdown2()" >Services</a></li>
               <div class="dropdown-content" id="dropdown-content2">
@@ -196,7 +120,7 @@ if(isset($_POST['submit'])){
     </div>
 
         </div>
-      </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

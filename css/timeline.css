@@ -229,14 +229,14 @@
 }
 
 .about{
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(211, 6, 6);
     width: 100%;
     left: 0px;
     height: 110px;
     position: absolute;
     border-top: solid;
     border-color: black;
-    border-width: 1px;
+    border-width: 0px;
     text-align: left;
 }
 
