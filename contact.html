@@ -20,6 +20,7 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +54,9 @@ if(isset($_POST['submit'])){
     <![endif]-->
     <script src="assets/js/button.js"></script> 
       <script type="text/javascript" src="dist/js/index.js"></script>
- 
+      <script type="text/javascript" src="dist/js/address.js"></script>
+
+
       
 
   </head>
@@ -126,14 +129,25 @@ if(isset($_POST['submit'])){
             <form>
             <address>
                 <strong><img src="apparkLogo.png" id="logo2" width="245" height="85"/></strong><br><br>
+                <div id="shanghai">
                 398 HanKouLu<br>
-                Shanghai, Huangpu Area<br>
+                Shanghai, Huangpu Area<br></div>
+                <div id="hangzhou">
+                18 Jiaogong Road, Room 1408, Building C<br>
+                Euro America Center Xihu District, Hangzhou<br></div>
+                <div id="suzhou">
+                19 South Guangji Road<br>
+                Suzhou, Jiangsu Province<br></div>
                 <abbr title="Phone">
                     P:</abbr>
                 (123) 456-7890
             </address>
-
+                <button type = "button" class = "btn btn-primary active" onclick="shanghai()">Shanghai</button>
+                <button type = "button" class = "btn btn-primary" onclick="hangzhou()" >Hangzhou</button>
+                <button type = "button" class = "btn btn-primary" onclick="suzhou()">Suzhou</button>
+ <br><br>
             </form>
+           
         </div>
         
 

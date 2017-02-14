@@ -71,3 +71,15 @@ font-size: 24px;
 .form-control{
     z-index: 0 !important;
 }
+
+#shanghai{
+    display:block;
+}
+
+#hangzhou{
+    display:none;
+}
+
+#suzhou{
+    display:none;
+}
