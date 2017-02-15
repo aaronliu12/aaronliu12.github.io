@@ -185,3 +185,25 @@ html, body{
         display: none;
     }
 }
+
+.mastfoot{
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    .mastfoot{
+        height: 90%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .mastfoot{
+        height: 85%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .mastfoot{
+        height: 80%;
+    }
+}
