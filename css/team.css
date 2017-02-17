@@ -18,15 +18,34 @@ font-size: 24px;
 
 @media (max-width: 991px){
     .contact{
-        top: 850px !important;
+        top: 1450px !important;
     }
     .col-sm-12{
         margin-top: 100px;
     }
 }
+
+@media (max-width: 1200px){
+    .contact{
+        top: 950px !important;
+    }
+    .col-sm-12{
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 704px){
+    .contact{
+        top: 1450px !important;
+    }
+    .col-sm-12{
+        margin-top: 100px;
+    }
+}
+
 @media only screen and (max-width: 480px){
     .contact{
-    top:900px !important;    
+    top:1450px !important;    
     width: 100%;
     left: 0px;
     height: 110px;
@@ -70,4 +89,104 @@ font-size: 24px;
 
 .form-control{
     z-index: 0 !important;
+}
+
+#chip{
+    vertical-align: bottom;
+   
+
+}
+#paul{
+    margin-left: 50px;
+      
+}
+
+#ECs, #ACs, #Strategists{
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    text-align: left;
+    width: 340px;
+    height: 450px;
+    background-color: rgba(0, 255, 255, 0.21);
+    margin-right: 0px;
+    display: inline-block;
+    vertical-align: bottom;  
+}
+
+
+#ECs{
+    background-color: rgba(0, 255, 255, 0.66);
+}
+
+#ACs{
+    background-color: rgba(0, 255, 255, 0.26);
+}
+#Strategists{
+    background-color: rgba(0, 255, 255, 0.46);
+}
+
+
+.container{
+    padding-left: 45px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+#EC, #Strategist, #AC{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 1s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+#ECduties{
+    padding: 15px;
+    font-size: 20px;
 }
