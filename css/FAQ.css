@@ -30,6 +30,11 @@ font-size: 24px;
     border-width: 1px;
     text-align: left;
     }
+    
+    div[class*='col-'] {
+            padding: 0 15px !important;
+
+    }
 }
 
 .contact{
