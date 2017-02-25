@@ -18,7 +18,7 @@ font-size: 24px;
 
 @media (max-width: 991px){
     .contact{
-        top: 1450px !important;
+        top: 1550px !important;
     }
     .col-sm-12{
         margin-top: 100px;
@@ -27,7 +27,7 @@ font-size: 24px;
 
 @media (max-width: 1200px){
     .contact{
-        top: 950px !important;
+        top: 1050px !important;
     }
     .col-sm-12{
         margin-top: 100px;
@@ -36,7 +36,7 @@ font-size: 24px;
 
 @media (max-width: 749px){
     .contact{
-        top: 1400px !important;
+        top: 1500px !important;
     }
     .col-sm-12{
         margin-top: 100px;
@@ -45,7 +45,7 @@ font-size: 24px;
 
 @media only screen and (max-width: 480px){
     .contact{
-    top:1450px !important;    
+    top:1550px !important;    
     width: 100%;
     left: 0px;
     height: 110px;
@@ -63,7 +63,7 @@ font-size: 24px;
     width: 100%;
     height: 110px;
     position: absolute;
-    top: 500px;
+    top: 550px;
     border-top: solid;
     border-color: black;
     border-width: 0px;
